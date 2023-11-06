@@ -17,6 +17,9 @@ public class TypingManger : MonoBehaviour
     public TMP_InputField playerInput;
     public int score = 0;
     public TMP_Text scoreDisplay;
+    public float energy = 10f;
+    public float maxEnergy = 100f;
+    public Slider energySlider;
 
     void Start()
     {
@@ -32,6 +35,20 @@ public class TypingManger : MonoBehaviour
     void Update() 
     {
         scoreDisplay.text = score.ToString();
+
+        energySlider.value = energy / maxEnergy;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (energy >= 10)
+            {
+                energy -= 10;
+            }
+            else
+            {
+                Debug.Log("Not enough energy!");
+            }
+        }
     }
 
     void SetRandomWords()
@@ -71,6 +88,14 @@ public class TypingManger : MonoBehaviour
             // refresh player input
             playerInput.text = "";
             playerInput.ActivateInputField();
+
+            // energy
+            energy += 10;
+
+            if (energy > maxEnergy)
+            {
+                energy = maxEnergy;
+            }
         }
     }
 }

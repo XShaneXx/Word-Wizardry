@@ -6,10 +6,10 @@ public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] float speed;
     Vector3 enemyPosition;
-    
-    void FixedUpdate()
+
+    void Update()
     {
-        enemyPosition= new Vector3 (0, speed*Time.deltaTime*(-1), 0);
+        enemyPosition= new Vector3 (speed*Time.deltaTime*(1), 0, 0);
         transform.Translate (enemyPosition);
     }
 }

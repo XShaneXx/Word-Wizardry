@@ -2,21 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CityHealth : MonoBehaviour
 {
-    [SerializeField] TMP_Text cityHealthText;
-    float health;
+    public Slider cityHealthSlider;
+    public float health;
+    public float maxHealth = 100f;
 
     private void Start()
     {
-        health = 100;
-        cityHealthText.text = "Health: " + health;
+        health = maxHealth;
     }
+
+    private void Update() 
+    {
+        cityHealthSlider.value = health / maxHealth;
+
+        if (health <= 0f)
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
+    }
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(collision.gameObject);
-        health -=100;
-        cityHealthText.text = "Health: " + health;
+        health -= 50f;
     }
 }
