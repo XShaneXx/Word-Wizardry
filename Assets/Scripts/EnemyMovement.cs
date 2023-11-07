@@ -12,4 +12,9 @@ public class EnemyMovement : MonoBehaviour
         enemyPosition= new Vector3 (speed*Time.deltaTime*(1), 0, 0);
         transform.Translate (enemyPosition);
     }
+
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
 }

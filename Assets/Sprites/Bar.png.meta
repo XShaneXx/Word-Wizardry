@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/Sprites/Bar.png.meta
 guid: 76aa5b16af8b3484f8ca1ee6de33f863
+=======
+guid: 2c41a000adca5ed41b3b12f82a35e35b
+>>>>>>> Stashed changes:Assets/Sprite/Bar.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

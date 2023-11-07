@@ -46,7 +46,7 @@ public class TypingManger : MonoBehaviour
             }
             else
             {
-                Debug.Log("Not enough energy!");
+                Debug.Log("Not enough energy! - TypingManager");
             }
         }
     }
@@ -97,5 +97,15 @@ public class TypingManger : MonoBehaviour
                 energy = maxEnergy;
             }
         }
+    }
+
+    public float getEnergy()
+    {
+        return energy;
+    }
+
+    public void addScore(int scoreToAdd)
+    {
+        score += scoreToAdd;
     }
 }
