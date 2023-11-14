@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
-
     public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainScene");
+    }
+
+    public void StartGame()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainScene");
