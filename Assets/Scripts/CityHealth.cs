@@ -10,6 +10,8 @@ public class CityHealth : MonoBehaviour
     public Slider cityHealthSlider;
     public float health;
     public float maxHealth = 100f;
+    [SerializeField] AudioSource soundEffects;
+    [SerializeField] AudioClip damageSound;
 
     private void Start()
     {
@@ -31,5 +33,7 @@ public class CityHealth : MonoBehaviour
     {
         Destroy(collision.gameObject);
         health -= 10f;
+        soundEffects.clip = damageSound;
+        soundEffects.Play();
     }
 }

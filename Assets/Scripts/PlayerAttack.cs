@@ -6,6 +6,8 @@ public class PlayerAttack : MonoBehaviour
 {
     public Transform firePoint;
     public TypingManger Typing;
+    [SerializeField] AudioSource soundEffectSource;
+    [SerializeField] AudioClip attackSound;
 
     // Update is called once per frame
     void Update()
@@ -31,6 +33,8 @@ public class PlayerAttack : MonoBehaviour
             if (enemy != null)
             {
                 enemy.Die();
+                soundEffectSource.clip = attackSound;
+                soundEffectSource.Play();
             }
         }
     }
