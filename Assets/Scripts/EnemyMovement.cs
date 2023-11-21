@@ -5,7 +5,13 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] float speed;
+    [SerializeField] Animator animator;
     Vector3 enemyPosition;
+
+    private void Start()
+    {
+        animator=GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -15,6 +21,7 @@ public class EnemyMovement : MonoBehaviour
 
     public void Die()
     {
+        animator.Play("Enemy_Death");
         Destroy(gameObject);
     }
 }
