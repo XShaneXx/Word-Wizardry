@@ -1223,7 +1223,6 @@ MonoBehaviour:
   energy: 10
   maxEnergy: 100
   energySlider: {fileID: 2133499058}
-  score: 0
   consecutiveStrikes: 0
   timer: 0
   strikeTimeThreshold: 5
@@ -2959,9 +2958,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f965dc53ddf15c74b947b1dbeb3762f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4369082771416516476, guid: 6b040e79a926dc34abc008e2dfac7340, type: 3}
+  enemyPrefab1: {fileID: 4369082771416516476, guid: 6b040e79a926dc34abc008e2dfac7340, type: 3}
+  enemyPrefab2: {fileID: 6561144504251717537, guid: 1c190204cb3acb34081f395a63e0f24d, type: 3}
   spawnInterval: 5
   spawnPoint: {fileID: 1211666698}
+  spawnChancePrefab1: 1
+  scoreGot: {fileID: 354741036}
 --- !u!4 &1211666698
 Transform:
   m_ObjectHideFlags: 0
@@ -3533,7 +3535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -312.00006, y: -165.00003}
+  m_AnchoredPosition: {x: -312.00003, y: -165.00003}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1824020262

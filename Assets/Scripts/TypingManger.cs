@@ -42,7 +42,7 @@ public class TypingManger : MonoBehaviour
     public Slider energySlider;
 
     [Header("Points")]
-    public static int score = 0;
+    public static int score = 9000;
     public int consecutiveStrikes = 0;
     public float timer = 0f;
     public float strikeTimeThreshold = 5f;
@@ -167,5 +167,10 @@ public class TypingManger : MonoBehaviour
     public void addScore(int scoreToAdd)
     {
         score += scoreToAdd;
+    }
+
+    public int getScore()
+    {
+        return score;
     }
 }
