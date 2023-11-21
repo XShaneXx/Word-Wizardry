@@ -119,7 +119,7 @@ public class TypingManger : MonoBehaviour
     {
         if (playerInput.text.Trim() == currentWord)
         {
-            score += 100;
+            score += currentWord.Length * 100;
 
             if (timer <= strikeTimeThreshold)
             {
