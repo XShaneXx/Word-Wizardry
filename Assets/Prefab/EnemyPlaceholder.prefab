@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
+  animator: {fileID: 0}
 --- !u!61 &-7365137467640077638
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -131,7 +132,7 @@ Animator:
   m_GameObject: {fileID: 4369082771416516476}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 33ba1c8344c6f1042bc1592452991d58, type: 2}
+  m_Controller: {fileID: 9100000, guid: 28a71bba8be966e48979cd9ee900b33a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

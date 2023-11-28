@@ -2962,7 +2962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab1: {fileID: 4369082771416516476, guid: 6b040e79a926dc34abc008e2dfac7340, type: 3}
-  enemyPrefab2: {fileID: 6561144504251717537, guid: 1c190204cb3acb34081f395a63e0f24d, type: 3}
+  enemyPrefab2: {fileID: 5405220704600076425, guid: 3a79325478e5a1f43b96104599029c4e, type: 3}
   spawnInterval: 5
   spawnPoint: {fileID: 1211666698}
   spawnChancePrefab1: 1
