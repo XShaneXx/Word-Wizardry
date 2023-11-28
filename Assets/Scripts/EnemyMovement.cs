@@ -5,13 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] float speed;
-    public Animator animator;
     Vector3 enemyPosition;
-
-    private void Start()
-    {
-        animator=GetComponent<Animator>();
-    }
 
     void Update()
     {

@@ -117,7 +117,7 @@ public class TypingManger : MonoBehaviour
 
     public void CheckInput()
     {
-        if (playerInput.text.Trim() == currentWord)
+        if (playerInput.text.Trim().ToLower() == currentWord.ToLower())
         {
             score += currentWord.Length * 100;
 
