@@ -80,19 +80,6 @@ public class TypingManger : MonoBehaviour
         // strike slider & display
         strikesSlider.value = 5f - timer;
         strikeDisplay.text = "+" + consecutiveStrikes.ToString();
-
-        // consume energy
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (energy >= 10)
-            {
-                energy -= 10;
-            }
-            else
-            {
-                Debug.Log("Not enough energy! - TypingManager");
-            }
-        }
     }
 
     void SetRandomWords()
@@ -172,5 +159,10 @@ public class TypingManger : MonoBehaviour
     public int getScore()
     {
         return score;
+    }
+
+    public void cenergy(float energyused)
+    {
+        energy -= energyused;
     }
 }

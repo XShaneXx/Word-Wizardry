@@ -57,6 +57,7 @@ public class EnemySpawn : MonoBehaviour
         if (currentScore >= 30000 && !p7)
         {
             spawnChancePrefab1 -= 0.1f; //0.7
+            spawnInterval = 3f;
             p7 = true;
         }
         
@@ -81,6 +82,7 @@ public class EnemySpawn : MonoBehaviour
         if (currentScore >= 70000 && !p3)
         {
             spawnChancePrefab1 -= 0.1f; //0.3
+            spawnInterval = 1.5f;
             p3 = true;
         }
         

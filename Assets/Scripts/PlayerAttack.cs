@@ -8,16 +8,28 @@ public class PlayerAttack : MonoBehaviour
     public TypingManger Typing;
     [SerializeField] AudioSource soundEffectSource;
     [SerializeField] AudioClip attackSound;
+    
+    public float attackCoolDown = 0.5f;
+    public float attackCD;
 
-    // Update is called once per frame
+    
+    void Start()
+    {
+        attackCD = 0f;
+    }
+
     void Update()
     {
         float energy = Typing.getEnergy();
 
-        if (Input.GetKeyDown(KeyCode.Space) && energy >= 10f)
+        attackCD -= Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.Space) && energy >= 10f && attackCD <= 0f)
         {
             Fire();
             Typing.addScore(1000);
+            Typing.cenergy(10f);
+            attackCD = attackCoolDown;
         }
     }
 
