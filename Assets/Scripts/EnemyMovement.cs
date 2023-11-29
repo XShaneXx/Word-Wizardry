@@ -6,6 +6,9 @@ public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] float speed;
     Vector3 enemyPosition;
+    public Animator animator;
+    public float deathAnimationDurationInFrames = 10;
+    public float frameRate = 60;
 
     void Update()
     {
@@ -15,6 +18,14 @@ public class EnemyMovement : MonoBehaviour
 
     public void Die()
     {
+        animator.SetBool("isDead", true);
+        StartCoroutine(DelayedDestroy());
+    }
+
+    private IEnumerator DelayedDestroy()
+    {
+        float durationInSeconds = deathAnimationDurationInFrames / frameRate;
+        yield return new WaitForSeconds(durationInSeconds);
         Destroy(gameObject);
     }
 }
